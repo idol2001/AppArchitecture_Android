@@ -1,4 +1,4 @@
-package info.jacoblee.apparchitecture.ui.main.fragment;
+package info.jacoblee.apparchitecture.ui.main.viewmodel;
 
 import android.util.Log;
 

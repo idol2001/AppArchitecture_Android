@@ -9,7 +9,6 @@ import com.airbnb.deeplinkdispatch.DeepLink;
 
 import info.jacoblee.apparchitecture.R;
 import info.jacoblee.apparchitecture.common.router.Router;
-import info.jacoblee.apparchitecture.ui.main.fragment.MainFragment;
 
 @DeepLink(Router.Main_Page)
 public class MainActivity extends AppCompatActivity {

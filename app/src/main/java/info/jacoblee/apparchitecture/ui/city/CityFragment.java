@@ -1,4 +1,4 @@
-package info.jacoblee.apparchitecture.ui.city.fragment;
+package info.jacoblee.apparchitecture.ui.city;
 
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -22,13 +22,13 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import info.jacoblee.apparchitecture.R;
 import info.jacoblee.apparchitecture.common.OnItemClickListener;
+import info.jacoblee.apparchitecture.ui.city.viewmodel.CityRecyclerAdapter;
+import info.jacoblee.apparchitecture.ui.city.viewmodel.CityViewModel;
 import info.jacoblee.apparchitecture.ui.city.model.CityModel;
 
 

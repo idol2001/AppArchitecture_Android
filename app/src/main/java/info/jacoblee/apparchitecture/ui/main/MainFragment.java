@@ -1,4 +1,4 @@
-package info.jacoblee.apparchitecture.ui.main.fragment;
+package info.jacoblee.apparchitecture.ui.main;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -23,8 +23,9 @@ import android.widget.Toast;
 
 import info.jacoblee.apparchitecture.R;
 import info.jacoblee.apparchitecture.common.router.Router;
-import info.jacoblee.apparchitecture.ui.city.fragment.CityFragment;
+import info.jacoblee.apparchitecture.ui.city.CityFragment;
 import info.jacoblee.apparchitecture.ui.city.model.CityModel;
+import info.jacoblee.apparchitecture.ui.main.viewmodel.MainViewModel;
 import info.jacoblee.apparchitecture.ui.main.model.RealTimeWeatherModel;
 
 public class MainFragment extends Fragment {

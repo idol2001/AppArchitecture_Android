@@ -8,7 +8,6 @@ import com.airbnb.deeplinkdispatch.DeepLink;
 
 import info.jacoblee.apparchitecture.R;
 import info.jacoblee.apparchitecture.common.router.Router;
-import info.jacoblee.apparchitecture.ui.city.fragment.CityFragment;
 
 @DeepLink(Router.City_Page)
 public class CityActivity extends AppCompatActivity {

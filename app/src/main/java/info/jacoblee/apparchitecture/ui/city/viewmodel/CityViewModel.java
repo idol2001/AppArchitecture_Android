@@ -1,10 +1,9 @@
-package info.jacoblee.apparchitecture.ui.city.fragment;
+package info.jacoblee.apparchitecture.ui.city.viewmodel;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import info.jacoblee.apparchitecture.common.webservice.WebApiRequest;
 import info.jacoblee.apparchitecture.ui.city.model.CityModel;
