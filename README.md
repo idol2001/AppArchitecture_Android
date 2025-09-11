@@ -2,6 +2,7 @@
 
 一个基于MVVM架构的Android应用框架示例，展示了现代Android应用开发的最佳实践，包括组件化架构、网络请求封装和页面路由管理，实现了一个简单的天气预报功能，可以查询城市的当前天气，使用[和风天气](https://dev.qweather.com)提供API和天气数据。
 
+
 ## 架构设计
 
 采用**MVVM架构**，核心组件包括：
@@ -83,4 +84,18 @@ AppArchitecture_Android
 - 响应式UI更新机制
 
 该框架可作为Android应用开发的基础模板，方便快速构建功能完善、架构清晰的应用程序。
+
+## 和风天气
+
+使用和风天气API，需要在项目中增加`res/values/qweather_auth.xml`文件，文件内容如下：
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="qweather_api_host">Your API Host</string>
+    <string name="qweather_private_key">Your Private Key</string>
+    <string name="qweather_key_id">Your Key ID</string>
+    <string name="qweather_project_id">Your Project ID</string>
+</resources>
+```
 
