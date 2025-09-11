@@ -1,5 +1,6 @@
 package info.jacoblee.apparchitecture.ui.main.viewmodel;
 
+import android.text.TextUtils;
 import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
@@ -39,7 +40,7 @@ public class MainViewModel extends ViewModel {
         realTimeWeather = new MutableLiveData<>();
         futureWeather = new MutableLiveData<>();
         errorMessage = new MutableLiveData<>();
-        if (cityName != null & !"".equals(cityName)) {
+        if (!TextUtils.isEmpty(cityName)) {
             this.cityName.setValue(cityName);
         } else {
             this.cityName.setValue("天津");

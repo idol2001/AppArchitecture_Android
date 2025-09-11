@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -40,10 +41,13 @@ public class CityFragment extends Fragment {
     private CityRecyclerAdapter mAdapter;
     private EditText mEditText;
     private RecyclerView mRecyclerView;
+    private String cityName;
 
 
-    public static CityFragment newInstance() {
-        return new CityFragment();
+    public static CityFragment newInstance(String cityName) {
+        CityFragment fragment = new CityFragment();
+        fragment.cityName = cityName;
+        return fragment;
     }
 
     @Override
@@ -74,7 +78,12 @@ public class CityFragment extends Fragment {
         });
 
         initView();
-        mViewModel.getTopCities();
+        if(!TextUtils.isEmpty(cityName)) {
+            mEditText.setText(cityName);
+            mViewModel.searchCities(cityName);
+        } else {
+            mViewModel.getTopCities();
+        }
     }
 
     private void initView() {
@@ -97,6 +106,9 @@ public class CityFragment extends Fragment {
                 if (!s.isEmpty()) {
                     mViewModel.setSearchCityName(s);
                     mViewModel.searchCities(s);
+                } else {
+                    mViewModel.setSearchCityName("");
+                    mViewModel.getTopCities();
                 }
             }
         });

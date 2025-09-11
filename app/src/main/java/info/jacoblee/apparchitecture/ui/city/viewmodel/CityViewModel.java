@@ -1,5 +1,7 @@
 package info.jacoblee.apparchitecture.ui.city.viewmodel;
 
+import android.text.TextUtils;
+
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -58,7 +60,7 @@ public class CityViewModel extends ViewModel {
     }
 
     public void searchCities(String searchWord) {
-        if (searchWord == null || searchWord.isEmpty()) {
+        if (TextUtils.isEmpty(searchWord)) {
             return;
         }
         request.search_cities(searchWord, new Callback<SearchCitesResponse>() {

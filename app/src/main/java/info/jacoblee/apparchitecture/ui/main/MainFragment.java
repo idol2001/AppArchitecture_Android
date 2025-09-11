@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import info.jacoblee.apparchitecture.R;
+import info.jacoblee.apparchitecture.common.router.PageEnum;
 import info.jacoblee.apparchitecture.common.router.Router;
 import info.jacoblee.apparchitecture.ui.city.CityFragment;
 import info.jacoblee.apparchitecture.ui.city.model.CityModel;
@@ -121,7 +122,7 @@ public class MainFragment extends Fragment {
         cityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Router.CityPage().to(getActivity(), resultLauncher);
+                Router.page(PageEnum.CITY_PAGE).with("乌鲁木齐").to(getActivity(), resultLauncher);
             }
         });
     }

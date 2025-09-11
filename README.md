@@ -28,28 +28,35 @@
 ### 路由定义
 - 在`Router`类中定义路由路径常量
 - 通过`@DeepLink`注解为Activity配置路由映射
+- 通过链式调用优雅跳转页面，注意with方法参数顺序要和deeplink地址中参数顺序一致
 
 ```java
 // 路由路径定义
-public class Router {
-    public static final String Main_Page = "customscheme://example.com/main_page/{board_name}";
-    public static final String City_Page = "customscheme://example.com/city_page";
+public enum PageEnum {
+    MAIN_PAGE(PageEnum.MAIN_PAGE_DEEPLINK),
+    CITY_PAGE(PageEnum.CITY_PAGE_DEEPLINK);
+
+    // 将 URL 定义为 public static final String 常量
+    public static final String MAIN_PAGE_DEEPLINK = "customscheme://example.com/main_page/{city_id}";
+    public static final String CITY_PAGE_DEEPLINK = "customscheme://example.com/city_page/{city_name}";
+  ...
 }
 
 // Activity路由配置
-@DeepLink(Router.Main_Page)
+@DeepLink(PageEnum.MAIN_PAGE_DEEPLINK)
 public class MainActivity extends AppCompatActivity { ... }
 ```
 
 ### 页面跳转
 - 普通跳转：
+- with方法参数顺序要和deeplink地址中参数顺序一致
   ```java
-  Router.MainPage(cityName).to(getContext())
+  Router.page(PageEnum.CITY_PAGE).with("乌鲁木齐").to(getActivity());
   ```
 
 - 需要返回结果的跳转：
   ```java
-  Router.MainPage(cityName).to(getContext(), resultLauncher)
+  Router.page(PageEnum.MAIN_PAGE).to(getActivity(), resultLauncher);
   ```
 
 ## 依赖库
