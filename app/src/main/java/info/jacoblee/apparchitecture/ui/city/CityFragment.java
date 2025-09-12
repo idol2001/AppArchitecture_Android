@@ -136,7 +136,7 @@ public class CityFragment extends Fragment {
                     if (city != null) {
                         Intent intent = new Intent();
                         intent.putExtra(CITY_SEARCH_RESULT_DATA, city);
-                        CityFragment.this.getActivity().setResult(CITY_SEARCH_RESULT, intent);
+                        getActivity().setResult(CITY_SEARCH_RESULT, intent);
                         getActivity().finish();
                     }
                 }

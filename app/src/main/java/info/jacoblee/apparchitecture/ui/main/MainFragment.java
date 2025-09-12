@@ -85,26 +85,35 @@ public class MainFragment extends Fragment {
         viewModel = new ViewModelProvider(this).get(MainViewModel.class);
         // TODO: Use the ViewModel
         viewModel.init(this.cityName);
-        viewModel.getRealTimeWeather().observe(this.getViewLifecycleOwner(), new Observer<RealTimeWeatherModel>() {
+        viewModel.getTimeText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
-            public void onChanged(RealTimeWeatherModel model) {
-                timeTextView.setText(model.getObsTime());
-                nowTempTextView.setText(model.getTemp() + "℃");
-                detailWeatherTextView.setText(model.getText() + " " + model.getWindDir() + " " + model.getWindScale() + "级 湿度：" + model.getHumidity());
+            public void onChanged(String time) {
+                timeTextView.setText(time);
             }
-
         });
-        viewModel.getCityName().observe(this.getViewLifecycleOwner(), new Observer<String>() {
+        viewModel.getNowTemp().observe(this.getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String temp) {
+                nowTempTextView.setText(temp);
+            }
+        });
+        viewModel.getDetailWeather().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String detail) {
+                detailWeatherTextView.setText(detail);
+            }
+        });
+        viewModel.getCityName().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(String city) {
                 cityNameTextView.setText(city);
             }
         });
-        viewModel.getErrorMessage().observe(this.getViewLifecycleOwner(), new Observer<String>() {
+        viewModel.getErrorMessage().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(String err) {
                 if (err != null && !err.isEmpty()) {
-                    Toast.makeText(MainFragment.this.getActivity(), err, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), err, Toast.LENGTH_LONG).show();
                 }
             }
         });

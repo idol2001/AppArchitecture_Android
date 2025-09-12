@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class RealTimeWeatherModel {
-	private String obsTime; //  2020-06-30T21; // 40+08; // 00,
+	private String obsTime = ""; //  2020-06-30T21; // 40+08; // 00,
 	private String temp; //  24,
 	private String feelsLike; //  26,
 	private String icon; //  101,

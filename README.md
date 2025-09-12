@@ -106,3 +106,13 @@ AppArchitecture_Android
 </resources>
 ```
 
+## 其他推荐的三方库
+
+还有一些我经常使用的第三方库，虽然没有在框架项目中使用，但也是我觉得非常好用，使用场景也非常多的一些三方库，列在这里：
+
+- [GroupedRecyclerViewAdapter](https://github.com/donkingliang/GroupedRecyclerViewAdapter) : 一个非常好用的RecyclerViewAdapter，可以非常方便的实现列表分组、多列等形式。
+- [Kongzue DialogX](https://github.com/kongzue/DialogX) : 一个灵活好用的对话框组件，支持各种形式的对话框。
+- [LiveEventBus](https://github.com/JeremyLiao/LiveEventBus) : 一款Android消息总线，基于LiveData，具有生命周期感知能力，支持Sticky，支持AndroidX，支持跨进程，支持跨APP.
+- [EasyPermission](https://github.com/githubZYQ/easypermission) : 这个是一个方便Android中权限管理的库，它使得申请权限和业务代码逻辑简单分离，不去关心权限的申请和回调。对于应用市场对于申请权限时需要有明确声明权限用途的需求实现非常方便。
+- [DSBridge for Android](https://github.com/wendux/DSBridge-Android) : 三端易用的现代跨平台 Javascript bridge， 通过它，你可以在Javascript和原生之间同步或异步的调用彼此的函数。
+- [miit-rule-checker](https://github.com/loper7/miit-rule-checker) : 这是一个通过拦截Java方法调用用以检测应用是否合规的工具，如果你的APP正饱受监管部门或应用市场时不时下发整改通知的折磨，那么用它来检查你的代码以及引用的三方库是再好不过的选择了！重点！正式打包提交市场审核时要去掉！
