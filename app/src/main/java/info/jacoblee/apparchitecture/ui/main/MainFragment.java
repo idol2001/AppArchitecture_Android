@@ -27,7 +27,6 @@ import info.jacoblee.apparchitecture.common.router.Router;
 import info.jacoblee.apparchitecture.ui.city.CityFragment;
 import info.jacoblee.apparchitecture.ui.city.model.CityModel;
 import info.jacoblee.apparchitecture.ui.main.viewmodel.MainViewModel;
-import info.jacoblee.apparchitecture.ui.main.model.RealTimeWeatherModel;
 
 public class MainFragment extends Fragment {
 
@@ -131,7 +130,7 @@ public class MainFragment extends Fragment {
         cityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Router.page(PageEnum.CITY_PAGE).with("乌鲁木齐").to(getActivity(), resultLauncher);
+                Router.page(PageEnum.CITY_PAGE).with("乌鲁木齐").go(getActivity(), resultLauncher);
             }
         });
     }

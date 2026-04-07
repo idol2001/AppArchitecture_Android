@@ -51,12 +51,12 @@ public class MainActivity extends AppCompatActivity { ... }
 - 普通跳转：
 - with方法参数顺序要和deeplink地址中参数顺序一致
   ```java
-  Router.page(PageEnum.CITY_PAGE).with("乌鲁木齐").to(getActivity());
+  Router.page(PageEnum.CITY_PAGE).with("乌鲁木齐").go(getActivity());
   ```
 
 - 需要返回结果的跳转：
   ```java
-  Router.page(PageEnum.MAIN_PAGE).to(getActivity(), resultLauncher);
+  Router.page(PageEnum.MAIN_PAGE).go(getActivity(), resultLauncher);
   ```
 
 ## 依赖库

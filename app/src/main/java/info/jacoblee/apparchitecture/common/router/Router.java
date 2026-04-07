@@ -37,7 +37,7 @@ public class Router {
         return this;
     }
 
-    public void to(Context context) {
+    public void go(Context context) {
         String deeplink = page.getPageUrl();
         Intent intent = new Intent(context, RouterActivity.class);
 
@@ -51,7 +51,7 @@ public class Router {
         context.startActivity(intent);
     }
 
-    public void to(Context context, @NotNull ActivityResultLauncher<Intent> resultLauncher) {
+    public void go(Context context, @NotNull ActivityResultLauncher<Intent> resultLauncher) {
         String deeplink = page.getPageUrl();
         Intent intent = new Intent(context, RouterActivity.class);
 
