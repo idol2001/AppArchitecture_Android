@@ -1,4 +1,4 @@
-package info.jacoblee.apparchitecture.ui.city.viewmodel;
+package info.jacoblee.apparchitecture.ui.city;
 
 import android.view.LayoutInflater;
 import android.view.View;

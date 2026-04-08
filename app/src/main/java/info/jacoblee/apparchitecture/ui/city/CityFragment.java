@@ -28,7 +28,6 @@ import java.util.ArrayList;
 
 import info.jacoblee.apparchitecture.R;
 import info.jacoblee.apparchitecture.common.OnItemClickListener;
-import info.jacoblee.apparchitecture.ui.city.viewmodel.CityRecyclerAdapter;
 import info.jacoblee.apparchitecture.ui.city.viewmodel.CityViewModel;
 import info.jacoblee.apparchitecture.ui.city.model.CityModel;
 

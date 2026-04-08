@@ -14,6 +14,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    buildFeatures {
+        buildConfig = true // 显式开启 BuildConfig 生成
+    }
 
     buildTypes {
         release {

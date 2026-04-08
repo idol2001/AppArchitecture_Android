@@ -2,6 +2,7 @@ package info.jacoblee.apparchitecture.common.webservice;
 
 import java.util.concurrent.TimeUnit;
 
+import info.jacoblee.apparchitecture.BuildConfig;
 import info.jacoblee.apparchitecture.MyApplication;
 import info.jacoblee.apparchitecture.R;
 import info.jacoblee.apparchitecture.ui.city.model.SearchCitesResponse;
@@ -31,7 +32,7 @@ public class WebApiRequest {
     public static OkHttpClient getClient() {
         return new OkHttpClient.Builder()
                 .addInterceptor(new AuthInterceptor())
-                .addInterceptor(new LoggingInterceptor())
+                .addInterceptor(new LoggingInterceptor(BuildConfig.DEBUG))
                 .connectionPool(new ConnectionPool(5, 1, TimeUnit.MINUTES))
                 .build();
     }
